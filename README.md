@@ -134,6 +134,10 @@ This is how the client will identify itself to the Kafka brokers. Default is `de
 
 The log level for the logger.
 
+##### `hash_function`
+
+Specify a hashing algorithm for paritioning that is supported by `Kafka::Parititioner`. 
+
 #### Message delivery
 
 ##### `delivery_interval`

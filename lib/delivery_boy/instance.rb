@@ -80,6 +80,9 @@ module DeliveryBoy
         logger: logger,
         connect_timeout: config.connect_timeout,
         socket_timeout: config.socket_timeout,
+        partitioner: Kafka::Partitioner.new(
+          hash_function: config.hash_function.to_sym
+        ),
         ssl_ca_cert: config.ssl_ca_cert,
         ssl_ca_cert_file_path: config.ssl_ca_cert_file_path,
         ssl_client_cert: config.ssl_client_cert,

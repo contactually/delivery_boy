@@ -8,6 +8,7 @@ module DeliveryBoy
     list :brokers, items: :string, sep: ",", default: ["localhost:9092"]
     string :client_id, default: "delivery_boy"
     string :log_level, default: nil
+    string :hash_function, default: nil
 
     # Buffering
     integer :max_buffer_bytesize, default: 10_000_000
